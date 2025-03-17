@@ -34,6 +34,14 @@ The environment will automatically activate whenever you enter the directory.
 
 - To add or remove packages, edit the `packages` list in `flake.nix`
 - You can find available packages by searching on [https://search.nixos.org/packages](https://search.nixos.org/packages)
+- To pin to a specific revision of nixpkgs (recommended for reproducibility):
+  ```
+  # Get the latest revision hash for e.g. nixos-24.11
+  git ls-remote https://github.com/NixOS/nixpkgs.git refs/heads/nixos-24.11 | cut -f 1
+
+  # Then update your flake.nix
+  nixpkgs.url = "github:NixOS/nixpkgs/REVISION_HASH";
+  ```
 
 ## Benefits
 

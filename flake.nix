@@ -1,6 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    # Pin to specific revision of nixpkgs:
+    # nixpkgs.url = "github:NixOS/nixpkgs/revision-hash-here";
   };
 
   outputs = { self, nixpkgs }:
