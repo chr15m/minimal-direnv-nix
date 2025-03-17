@@ -12,7 +12,7 @@ The repository contains a simple setup with:
 
 ### Prerequisites
 
-- Install [Nix](https://nixos.org/download.html)
+- Install [Nix](https://nixos.org/download.html) (can use `apt install nix`)
 - Install [direnv](https://direnv.net/docs/installation.html)
 - Make sure direnv is hooked into your shell
 
