@@ -4,16 +4,9 @@ This repository demonstrates a minimal setup for isolated development environmen
 
 ## Overview
 
-The repository contains two variants of the same setup:
-
-1. **Single-file variant** (root directory)
-   - `flake.nix` - Contains both the Nix configuration and package list
-   - `.envrc` - Simple direnv configuration to use the flake
-
-2. **Two-file variant** (`twofiles/` directory)
-   - `flake.nix` - Contains the Nix configuration
-   - `packages.nix` - Separate file for the package list
-   - `.envrc` - Simple direnv configuration to use the flake
+The repository contains a simple setup with:
+- `flake.nix` - Contains both the Nix configuration and package list
+- `.envrc` - Simple direnv configuration to use the flake
 
 ## Usage
 
@@ -26,15 +19,13 @@ The repository contains two variants of the same setup:
 ### Getting Started
 
 1. Clone this repository
-2. Navigate to either the root directory or the `twofiles/` directory
-3. Run `direnv allow` to enable the environment
+2. Run `direnv allow` to enable the environment
 
 The environment will automatically activate whenever you enter the directory.
 
 ### Customizing
 
-- To add or remove packages in the single-file variant, edit the `packages` list in `flake.nix`
-- To add or remove packages in the two-file variant, edit `packages.nix`
+- To add or remove packages, edit the `packages` list in `flake.nix`
 - You can find available packages by searching on [https://search.nixos.org/packages](https://search.nixos.org/packages)
 
 ## Benefits
