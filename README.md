@@ -1,20 +1,27 @@
-# Minimal Nix and Direnv Setup
+# Minimal Nix + Direnv Setup
 
-This repository demonstrates a minimal setup for isolated development environments using [Nix](https://nixos.org/) and [direnv](https://direnv.net/).
+This repository demonstrates a minimal setup for isolated development environments using [Nix](https://nixos.org/) and [direnv](https://direnv.net/). Tested on Ubuntu but should work on other OSes too.
 
 ## Overview
 
 The repository contains a simple setup with:
-- `flake.nix` - Contains both the Nix configuration and package list
-- `.envrc` - Simple direnv configuration to use the flake
+- [`flake.nix`](./flake.nix) - Contains both the Nix configuration and package list
+- [`.envrc`](./.envrc) - Simple direnv configuration to use the flake
 
 ## Usage
 
-### Prerequisites
+### Set up
 
-- Install [Nix](https://nixos.org/download.html) (can use `apt install nix`)
+These are the steps you need to get this set up on a machine the first time.
+Once you've done them once you only need to create `.envrc` and `flake.nix` in a project to create an isolated development environment.
+
+- Install [Nix](https://nixos.org/download.html)
+  - `sudo apt install nix-bin`
+  - `sudo usermod -aG nix-users USERNAME`
 - Install [direnv](https://direnv.net/docs/installation.html)
-- Make sure direnv is hooked into your shell
+  - Ensure you have a `~/bin`.
+  - `curl -sfL https://direnv.net/install.sh | bash`
+  - Add direnv to `~/.bashrc`: `eval "$(direnv hook bash -)"`
 
 ### Getting Started
 
